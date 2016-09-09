@@ -1,7 +1,5 @@
 (function() {
 
-  console.log("co jest");
-
     window.addEventListener("load", function(){
 
       ga('create', 'UA-78233995-2', 'auto', 'terjanq');

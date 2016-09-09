@@ -1,7 +1,11 @@
 (function() {
 
+  console.log("co jest");
 
     window.addEventListener("load", function(){
+
+      ga('create', 'UA-78233995-2', 'auto', 'terjanq');
+      ga('terjanq.send', 'pageview', '/chrome');
 
       setTimeout(function(){
 
@@ -32,6 +36,10 @@
       window.addEventListener("keyup", function(e){
           if(e.keyCode == 80) paused ^= true;
       });
+
+
+
+
 
   });
 })();

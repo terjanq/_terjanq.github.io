@@ -33,21 +33,7 @@
 
         leaderboard.parentNode.insertBefore(myDiv, leaderboard.nextSibling);
 
-
-
-        var observerConfig = { attributes: true, attributeFilter: ['style'] };
-
-
-
-         var observer = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if(mutation.type == "attributes" && mutation.attributeName == "style" && mutation.target === leaderboard) {
-              myDiv.style.cssText = leaderboard.style.cssText + ";" + myCssText;
-            }
-          });
-        });
-
-       observer.observe(leaderboard, observerConfig);
+        uiElems.push(myDiv);
 
 
         var paused = false;

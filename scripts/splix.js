@@ -28,7 +28,7 @@
         var myDiv = document.createElement("div");
         myDiv.className  = "greenBox";
         myDiv.style.cssText = myCssText;
-        myDiv.innerHTML = "terjanq.github.io/splix.io";
+        myDiv.innerHTML = "terjanq.github.io/splix";
 
 
         leaderboard.parentNode.insertBefore(myDiv, leaderboard.nextSibling);
@@ -60,6 +60,74 @@
         window.addEventListener("keyup", function(e){
             if(e.keyCode == 80) paused ^= true;
         });
+
+        var nameForm = document.getElementById("nameForm");
+        var myBox = document.createElement("div");
+        var br = document.createElement("br");
+
+
+        nameForm.insertAdjacentHTML("beforeEnd", "<br><select style='float:left; margin-top: 20px; background:#bdf7c4' id='_servers' class='fancyBox'><option selected value='#'>Select server</option></select>");
+
+
+        var interval;
+
+
+        interval = setInterval(function(){
+          if(window.servers.length > 0) {
+            clearInterval(interval);
+            var no = 1 ;
+            var options = "<option>Select server</option>";
+            for(var i=0; i<window.servers.length; i++){
+              var ping = window.servers[i].avgPing;
+              var subservers = window.servers[i].servers;
+              for(var j=0; j<subservers.length; j++){
+                for(var k = 0; k<subservers[j].lobbies.length; k++){
+                  options += "\n<option value='#"+subservers[j].lobbies[k].hash+"'>"+(no++)+". #" + subservers[j].lobbies[k].hash + "</option>";
+                }
+              }
+
+            }
+            document.getElementById("_servers").innerHTML = options;
+            if(window.location.hash.indexOf("#") != -1) document.getElementById("_servers").value = window.location.hash;
+          }
+
+        },100);
+
+        var myStyle = (function() {
+              var style = document.createElement("style");
+              style.appendChild(document.createTextNode(""));
+              document.head.appendChild(style);
+              return style;
+        })();
+
+        var cssRules = document.styleSheets[0]["cssRules"];
+        for(var i=0; i<cssRules.length; i++){
+
+            if(cssRules[i].cssText.indexOf("#nameInput")!=-1) {
+
+              var rule = "#_servers" + cssRules[i].cssText.match(/{.*}/)[0];
+              rule = rule.replace("-webkit-appearance: none;", "");
+              myStyle.sheet.insertRule(rule, 0);
+           }
+        }
+
+
+
+        document.getElementById("_servers").onchange = function(){
+          window.location.assign(document.getElementById("_servers").value);
+        };
+
+
+
+        var _showBegin = showBegin;
+        var _hideBegin = hideBegin;
+
+
+        window.showBegin = function(){
+          if(window.location.hash.indexOf("#") != -1) document.getElementById("_servers").value = window.location.hash;
+          _showBegin();
+        };
+
 
         ga('create', 'UA-78233995-2', 'auto', 'ter');
         ga('ter.send', 'pageview', '/chrome');

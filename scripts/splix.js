@@ -2,6 +2,7 @@
 
       window.addEventListener("load", function(){
 
+        var game = {};
 
         setTimeout(function(){
 
@@ -11,10 +12,13 @@
         }, 2000);
 
 
-        document.body.addEventListener("mousewheel", WheelHandler, true);
+
+        var mouseWheelEvt= ((/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel");
+
+        document.body.addEventListener(mouseWheelEvt, WheelHandler, true);
 
        function WheelHandler(event) {
-           var zoom = BLOCKS_ON_SCREEN * Math.pow(0.93, event.wheelDelta / 120 || event.detail || 0);
+           var zoom = BLOCKS_ON_SCREEN * Math.pow(0.93, event.wheelDelta / 120 || -event.detail || 0);
            if(zoom < 100) BLOCKS_ON_SCREEN = 100;
            else if(zoom > 16000) BLOCKS_ON_SCREEN = 16000;
            else BLOCKS_ON_SCREEN = zoom;
@@ -52,27 +56,49 @@
         var br = document.createElement("br");
 
 
-        nameForm.insertAdjacentHTML("beforeEnd", "<br><select style='float:left; margin-top: 20px; background:#bdf7c4' id='_servers' class='fancyBox'><option selected value='#'>Select server</option></select>");
+        nameForm.insertAdjacentHTML("beforeEnd", "<br><select style='float:left; margin-top: 20px; background:#bdf7c4' id='_servers' class='fancyBox'><option selected value='#'>Loading servers...</option></select>");
 
 
         var interval;
 
+        var hashes = [];
+
+        window.searchServersRecursive = function(obj, ping){
+           if(obj && obj.hash) {
+                  hashes.push({hash: obj.hash, ping: ping});
+                  return;
+           }
+           if(Array.isArray(obj)) for(var i=0; i<obj.length; i++) searchServersRecursive(obj[i], ping);
+           else {
+              var arr = Object.getOwnPropertyNames(obj);
+              if(arr[0] == "0") return;
+              for(var i=0; i<arr.length; i++) {
+                if(Array.isArray(obj[arr[i]])) searchServersRecursive(obj[arr[i]], ping);
+              }
+            }
+        };
+
+
+        function no0(){
+          for (var i=0; i<window.servers.length; i++){
+            if(window.servers[i].avgPing === 0) return false;
+          }
+          return true;
+        }
 
         interval = setInterval(function(){
-          if(window.servers.length > 0) {
+          if(window.servers.length > 0 && no0()) {
             clearInterval(interval);
             var no = 1 ;
             var options = "<option>Select server</option>";
-            for(var i=0; i<window.servers.length; i++){
-              var ping = window.servers[i].avgPing;
-              var subservers = window.servers[i].servers;
-              for(var j=0; j<subservers.length; j++){
-                for(var k = 0; k<subservers[j].lobbies.length; k++){
-                  options += "\n<option value='#"+subservers[j].lobbies[k].hash+"'>"+(no++)+". #" + subservers[j].lobbies[k].hash + "</option>";
-                }
-              }
 
-            }
+            for(var i=0; i<servers.length; i++) searchServersRecursive(servers[i], servers[i].avgPing);
+
+            hashes.sort(function(a, b){return a.ping - b.ping });
+
+            for(var i=0; i<hashes.length; i++)
+                  options += "\n<option value='#"+hashes[i].hash+"'>"+(no++)+". #" + hashes[i].hash + " ( " + hashes[i].ping + " )</option>";
+
             document.getElementById("_servers").innerHTML = options;
             if(window.location.hash.indexOf("#") != -1) document.getElementById("_servers").value = window.location.hash;
           }

